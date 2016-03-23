@@ -5,8 +5,12 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
  
-@WebService(portName = "HelloWebServicePort", serviceName = "HelloWebServiceService", targetNamespace = "http://demo.webservices.com/")
-// @SOAPBinding(style = SOAPBinding.Style.RPC)
+@WebService(
+    name = "HelloWebService",
+    portName = "HelloWebServicePort", 
+    serviceName = "HelloWebServiceService", 
+    targetNamespace = "http://demo.webservices.com/")
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
 public class HelloWebService {
  
  
